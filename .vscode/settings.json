@@ -1,0 +1,9 @@
+{
+    "terminal.integrated.profiles.osx": {
+        "PowerShell": {
+            "path": "/usr/local/bin/pwsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "PowerShell"
+
+}
