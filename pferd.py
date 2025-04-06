@@ -32,3 +32,13 @@ pf2.sich_vorstellen()
 
 pf1.laufen("30 km/h")
 print(pf1.geschwindigkeit)  # Fix: richtige Variable
+
+class Sattel(Pferd):
+
+    def sattel_farbe(self, farbe):
+        self.sattelfarbe = farbe
+        print("Die Farbe ist", self.sattelfarbe)
+
+
+otto = Sattel("pink")
+print(otto.id)

@@ -10,10 +10,11 @@ if __name__ == "__main__":
     experiment_name = "sakai_3_max_hr"
     date = "23.03.2025"
     supervisor = "Julian Huber"
-    subject = "Aufgabe 3"
 
     first_person = build_person(first_name, last_name, sex, age)
     print("Die Testperson:", first_person)
+
+    subject = first_person
 
     first_experiment = build_experiment(experiment_name, date, supervisor, subject)
     print("Das Experiment:", first_experiment)
