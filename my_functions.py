@@ -11,12 +11,12 @@ def estimate_max_hr(age_years : int , sex : str) -> int:
     max_hr_bpm  = input("Enter maximum heart rate:")
   return int(max_hr_bpm)
 
-def build_person(first_name, last_name, sex, age) -> dict:
+def build_person(first_name, last_name, sex, dateofbirth) -> dict:
     """Returns a dictionary of information about a supervisor or subject."""
     person_dict = { "first_name" : first_name,
              "last_name" : last_name,
-             "age" : age,
-             "estimate_max_hr" : estimate_max_hr(age,sex)}
+             "age" : dateofbirth,
+             "estimate_max_hr" : estimate_max_hr(dateofbirth,sex)}
     return person_dict
 
 def build_experiment(experiment_name, date, supervisor, subject) -> dict:
