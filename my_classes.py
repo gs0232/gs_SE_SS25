@@ -1,4 +1,5 @@
 from my_functions import estimate_max_hr
+from datetime import datetime
 
 class Person():
 
@@ -12,10 +13,11 @@ class Subject(Person):
     def __init__(self, first_name, last_name, sex, dateofbirth):
         super().__init__(first_name, last_name)
         self.sex = sex
-        self.__dateofbirth = dateofbirth
+        self.__dateofbirth = datetime.strptime(dateofbirth, "%d.%m.%Y")
+        self.age =  datetime.today().year- self.__dateofbirth.year
 
     def estimate_max_hr(self):
-        self.max_hr = estimate_max_hr(self.__dateofbirth, self.sex)
+        self.max_hr = estimate_max_hr(self.age, self.sex)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} \nGender: {self.sex} \nAge: {self.__dateofbirth} \nEstimated HR: {self.max_hr}"

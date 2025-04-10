@@ -22,6 +22,7 @@ if __name__ == "__main__":
     estimated_hr = estimate_max_hr(age_years, sex)
     print("Die Herzfrequenz:", estimated_hr)
 
+
 # Klasse Sensor
 
 class Sensor():
