@@ -1,5 +1,7 @@
 from my_functions import build_person, build_experiment, estimate_max_hr
 import numpy as np
+from my_classes import Person
+
 
 if __name__ == "__main__":
     first_name = "Sophia"
@@ -21,6 +23,9 @@ if __name__ == "__main__":
 
     estimated_hr = estimate_max_hr(age_years, sex)
     print("Die Herzfrequenz:", estimated_hr)
+
+    person_ich = Person("Sophia", "Gwiggner")
+    person_ich.post()
 
 
 # Klasse Sensor

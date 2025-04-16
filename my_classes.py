@@ -1,11 +1,24 @@
 from my_functions import estimate_max_hr
 from datetime import datetime
+import requests
+import json
 
 class Person():
 
     def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
+        self.id = last_name[0:3]+first_name[0:3]
+
+    def post(self):
+        url = "http://127.0.0.1:5000/person/"
+        data = {
+            "id": self.id,
+            "first_name": self.first_name,
+            "last_name": self.last_name
+        }
+        data_json = json.dumps(data)
+        response = requests.post(url, data=data_json)
 
 
 class Subject(Person):
