@@ -1,11 +1,14 @@
 [project]
-name = "gs_SE_SS25_Leistungstest"
+name = "Leistungstest_SE_2025"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "gs0232", email = "gs0232@mci4me.at"},
 ]
-dependencies = ["numpy>=2.0.2", "pandas>=2.2.3"]
+dependencies = [
+    "numpy>=2.0.2",
+    "pandas>=2.2.3",
+]
 requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
